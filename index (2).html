@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QR Code برای منو</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+</head style="text-align:center">
+<body style="background-color: #c1ffee;">
+
+  <h1 style="text-align: center;">اسکن کنید و وارد منوی ما شوید</h1>
+  <div id="qrcode" style="text-align: center; margin-top: 89px; margin-left: 42%;">
+</div>
+
+  <script>
+    // آدرس صفحه منوی شما
+    const menuUrl = " https://parisa70-ai.github.io/menu.html"; // آدرس صفحه منو
+
+    // ایجاد QR کد
+    const qrcode = new QRCode(document.getElementById("qrcode"), {
+      text: menuUrl, // لینک صفحه منو
+      width: 200,    // عرض QR کد
+      height: 200    // ارتفاع QR کد
+    });
+  </script>
+</body>
+</html>
